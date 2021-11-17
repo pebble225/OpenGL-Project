@@ -16,7 +16,7 @@ target_link_directories(${PROJECT_NAME}
 	PUBLIC dep/glfw/src
 )
 
-target_link_libraries(${PROJECT_DIR} glfw)
+target_link_libraries(${PROJECT_NAME} glfw)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

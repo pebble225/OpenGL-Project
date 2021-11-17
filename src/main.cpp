@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+
+
 int main()
 {
 	int status = glfwInit();
