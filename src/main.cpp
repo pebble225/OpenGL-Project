@@ -1,3 +1,4 @@
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 #include <iostream>
@@ -5,14 +6,26 @@
 #include <string>
 #include <vector>
 
-
-
 int main()
 {
 	int status = glfwInit();
 
-	std::cout << status << std::endl;
+	GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL", NULL, NULL);
+	
+	glfwMakeContextCurrent(window);
 
+	glewInit();
+
+	while (!glfwWindowShouldClose(window))
+	{
+		glfwPollEvents();
+
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		glfwSwapBuffers(window);
+	}
+
+	glfwDestroyWindow(window);
 	glfwTerminate();
 
 	return 0;
