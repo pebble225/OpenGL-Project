@@ -8,6 +8,7 @@ add_executable(OpenGL ./src/main.cpp)
 
 add_subdirectory(./dep/glfw)
 add_subdirectory(./dep/glew)
+add_subdirectory(./dep/glm)
 
 add_definitions(-DGLEW_STATIC)
 
@@ -15,6 +16,7 @@ target_include_directories(${PROJECT_NAME}
 	PUBLIC dep/glfw/include
 	PUBLIC dep/glew/include
 	PUBLIC include/
+	PUBLIC dep/glm/glm
 )
 
 target_link_directories(${PROJECT_NAME}
