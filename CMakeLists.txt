@@ -4,7 +4,9 @@ project(OpenGL VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(OpenGL ./src/main.cpp)
+add_executable(OpenGL ./src/main.cpp
+	./src/GameInstance.cpp
+)
 
 add_subdirectory(./dep/glfw)
 add_subdirectory(./dep/glew)
