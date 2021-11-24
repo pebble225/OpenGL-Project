@@ -14,6 +14,7 @@ add_definitions(-DGLEW_STATIC)
 target_include_directories(${PROJECT_NAME}
 	PUBLIC dep/glfw/include
 	PUBLIC dep/glew/include
+	PUBLIC include/
 )
 
 target_link_directories(${PROJECT_NAME}
