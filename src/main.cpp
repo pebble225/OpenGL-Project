@@ -1,11 +1,16 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+#include "Core/GameInstance.h"
+
 #include <iostream>
 #include <bitset>
 #include <string>
 #include <vector>
 #include <time.h>
+#include <stdint.h>
+
+GameInstance g;
 
 int main()
 {
@@ -34,12 +39,16 @@ int main()
 		std::cout << "GLEW failed to initialize." << std::endl;
 	}
 
+	g.init();
+
 	//setting up timing system
 
 	int tps = 60;
 	double tickns = 1000 / tps;
 
 	double tickDelta = 0.0;
+
+	uint64_t runtime = 0;
 
 	time_t lastTick = clock();//open to changing this if there's a better option
 
@@ -51,7 +60,17 @@ int main()
 		tickDelta += (double)(nowTick-lastTick) / tickns;
 		lastTick = nowTick;
 
+		while (tickDelta >= 1.0)
+		{
+			tickDelta -= 1.0;
+			runtime++;
+
+			g.Update(runtime);
+		}
+
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		g.Render();
 
 		glfwSwapBuffers(window);
 	}
