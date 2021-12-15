@@ -1,6 +1,6 @@
-#OpenGL Project
+# OpenGL Project
 
-##Linux Build
+## Linux Build
 
 Firstly clone the submodules by running `git submodule init` and then `git submodule update`.
 
@@ -10,7 +10,6 @@ There are a few more dependencies required for cmake configuration as follows: `
 
 Visual Studio code is currently used to manage cmake configuration and the building process. I would recommend vs code because it's already set up with it. Otherwise you can run the following command from the project's root directory: `cmake -S "./" -B "./build/" -G "Unix Makefiles"`
 
-1. `cmake -S "./" -B "./build/" -G "Unix Makefiles"`
-2. `cmake --build "./build/"`
+You can then build inside of vscode or execute `cmake --build "./build/"`.
 
 Hopefully the project will then build successfully.
