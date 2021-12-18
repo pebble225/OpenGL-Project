@@ -68,15 +68,13 @@ int main()
 			tickDelta -= 1.0;
 			runtime++;
 
-			fps++;
-
 			g.Update(runtime);
 		}
 
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		g.Render();
-		//fps++;
+		fps++;
 
 		glfwSwapBuffers(window);
 
