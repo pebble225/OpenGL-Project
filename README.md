@@ -1,5 +1,11 @@
 # OpenGL Project
 
+## Windows Build
+
+I will eventually update this with more instructions to build on Windows. For now, my suggestion is to use the WinBuilds compiler and select the x86_643 architecture. I can't garuntee there won't be problems.
+
+Clone the submodules by running `git submodule init` and then `git submodule update`.
+
 ## Linux Build
 
 Firstly clone the submodules by running `git submodule init` and then `git submodule update`.
@@ -13,3 +19,7 @@ Visual Studio code is currently used to manage cmake configuration and the build
 You can then build inside of vscode or execute `cmake --build "./build/"`.
 
 Hopefully the project will then build successfully.
+
+## Interested in helping?
+
+Making this game run effectively is my number one priority and I am completely open to suggestions. 

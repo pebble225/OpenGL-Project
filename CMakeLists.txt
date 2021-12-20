@@ -6,6 +6,7 @@ enable_testing()
 
 add_executable(OpenGL ./src/main.cpp
 	./src/GameInstance.cpp
+	./src/ShaderProgram.cpp
 )
 
 add_subdirectory(./dep/glfw)

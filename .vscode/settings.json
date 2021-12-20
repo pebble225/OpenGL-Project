@@ -37,6 +37,19 @@
 		"streambuf": "cpp",
 		"tuple": "cpp",
 		"utility": "cpp",
-		"typeinfo": "cpp"
+		"typeinfo": "cpp",
+		"bit": "cpp",
+		"cstddef": "cpp",
+		"deque": "cpp",
+		"algorithm": "cpp",
+		"iterator": "cpp",
+		"memory_resource": "cpp",
+		"numeric": "cpp",
+		"optional": "cpp",
+		"random": "cpp",
+		"string": "cpp",
+		"string_view": "cpp",
+		"iomanip": "cpp",
+		"cinttypes": "cpp"
 	}
 }

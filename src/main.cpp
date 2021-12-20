@@ -82,7 +82,7 @@ int main()
 		{
 			performanceTimer += 1.0;
 
-			std::cout << "FPS: " << fps << std::endl;
+			//std::cout << "FPS: " << fps << std::endl;
 
 			fps = 0;
 		}
