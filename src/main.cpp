@@ -12,6 +12,25 @@
 
 GameInstance g;
 
+void APIENTRY openglcatcherror(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const char* message, const void* userparam)
+{
+	std::cout << "===================================\nOPENGL ERROR:\nSource: " << source << "\nType: 0x" << type << "\nId: " << id << "\nSeverity: " << severity << "\n\n> ";
+	std::cout << message << "\n\n";
+	
+	exit(-1);
+}
+
+void enableglDebugFlag()
+{
+	glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
+}
+
+void enableglDebug()
+{
+	glEnable(GL_DEBUG_OUTPUT);
+	glDebugMessageCallback(openglcatcherror, NULL);
+}
+
 int main()
 {
 	//setting up window and opengl
@@ -23,7 +42,9 @@ int main()
 		return -1;
 	}
 
-	GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL", NULL, NULL);
+	enableglDebugFlag();
+
+	GLFWwindow* window = glfwCreateWindow(1600, 900, "Untitled RPG Game", NULL, NULL);
 	
 	if (window == NULL)
 	{
@@ -40,6 +61,8 @@ int main()
 	}
 
 	g.init();
+
+	enableglDebug();
 
 	//setting up timing system
 
