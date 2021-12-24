@@ -1,4 +1,4 @@
-#include <GameGL/ShaderProgram.h>
+#include "GameGL/ShaderProgram.h"
 
 ShaderProgram::ShaderProgram()
 {

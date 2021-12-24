@@ -6,6 +6,7 @@
 
 #include <stdint.h>//can't get <cstdint> to work. C++ 11 compatibility issues
 #include "GameGL/ShaderProgram.h"
+#include "GameGL/meshData.h"
 #include <glm.hpp>
 
 class GameInstance
