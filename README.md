@@ -19,7 +19,3 @@ Visual Studio code is currently used to manage cmake configuration and the build
 You can then build inside of vscode or execute `cmake --build "./build/"`.
 
 Hopefully the project will then build successfully.
-
-## Interested in helping?
-
-Making this game run effectively is my number one priority and I am completely open to suggestions. 
